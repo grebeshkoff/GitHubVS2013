@@ -13,8 +13,17 @@ namespace mvc_one.Controllers
 
         public ActionResult Index()
         {
+            ViewBag.Entries = GetRecentEntries();
             return View();
         }
+
+        private List<GuestbookEntry> GetRecentEntries()
+        {
+            return (from entry in _db.Entries
+                orderby entry.DateAdded descending
+                select entry).Take(20).ToList();
+        }
+
         public ActionResult Create()
         {
             return View();
@@ -25,7 +34,8 @@ namespace mvc_one.Controllers
         {
             _db.Entries.Add(entry);
             _db.SaveChanges();
-            return View();
+            ViewBag.Entries = GetRecentEntries();
+            return View("Index");
         }
 
     }
