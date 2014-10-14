@@ -7,27 +7,26 @@ using mvc_one.Models;
 
 namespace mvc_one.Controllers
 {
-    public class HomeController : Controller
+    public class GuestbookController : Controller
     {
+        GuestbookContext _db = new GuestbookContext();
+
         public ActionResult Index()
         {
-            ViewBag.Message = "Modify this template to jump-start your ASP.NET MVC application.";
-
             return View();
         }
-
-        public ActionResult About()
+        public ActionResult Create()
         {
-            ViewBag.Message = "Your app description page.";
-
             return View();
         }
 
-        public ActionResult Contact()
+        [HttpPost]
+        public ActionResult Create(GuestbookEntry entry)
         {
-            ViewBag.Message = "Your contact page.";
-
+            _db.Entries.Add(entry);
+            _db.SaveChanges();
             return View();
         }
+
     }
 }
