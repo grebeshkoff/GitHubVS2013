@@ -9,10 +9,10 @@ namespace mvc_one.Models
     public class GuestbookContext : DbContext
     {
         public GuestbookContext()
-            : base("guestbook")
+            : base("GuestBook")
         {
         }
 
-        DbSet<GuestbookEntry> Entries { get; set; }
+        public DbSet<GuestbookEntry> Entries { get; set; }
     }
 }
