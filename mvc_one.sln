@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mvc_one", "mvc_one\mvc_one.csproj", "{641F8794-8AC3-45BE-BBA8-3933C7C82A7F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mvc_one.Tests", "mvc_one.Tests\mvc_one.Tests.csproj", "{8821ADFC-4188-4B17-84ED-A5313564B08E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mvc_one.MySqlTest", "mvc_one.MySqlTest\mvc_one.MySqlTest.csproj", "{F662D5B7-627A-437D-9774-BCD389567470}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{641F8794-8AC3-45BE-BBA8-3933C7C82A7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{641F8794-8AC3-45BE-BBA8-3933C7C82A7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{641F8794-8AC3-45BE-BBA8-3933C7C82A7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{641F8794-8AC3-45BE-BBA8-3933C7C82A7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8821ADFC-4188-4B17-84ED-A5313564B08E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8821ADFC-4188-4B17-84ED-A5313564B08E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8821ADFC-4188-4B17-84ED-A5313564B08E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8821ADFC-4188-4B17-84ED-A5313564B08E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F662D5B7-627A-437D-9774-BCD389567470}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F662D5B7-627A-437D-9774-BCD389567470}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F662D5B7-627A-437D-9774-BCD389567470}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F662D5B7-627A-437D-9774-BCD389567470}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
