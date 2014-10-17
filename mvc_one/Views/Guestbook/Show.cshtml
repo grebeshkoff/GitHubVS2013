@@ -1,0 +1,16 @@
+﻿@model mvc_one.Models.GuestbookEntry
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<h2>title</h2>
+
+
+<section class="contact">
+    <header>
+        <h3>@Model.Message</h3>
+    </header>
+    <p>Posted by @Model.Name on @Model.DateAdded.ToLongDateString()</p>
+</section>

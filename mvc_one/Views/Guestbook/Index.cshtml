@@ -1,4 +1,5 @@
 ﻿@using System.Collections.Specialized
+@using mvc_one.Models
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -9,11 +10,15 @@
 @Html.ActionLink("New mesage", "Create", "Guestbook")
 
 
-@foreach (var entry in ViewBag.Entries)
-{
+@foreach (GuestbookEntry entry in ViewBag.Entries)
+{   
     <section class="contact">
         <header>
-            <h3>@entry.Message</h3>
+            
+            <h3>
+                @Html.ActionLink(entry.Message, "Show", "Guestbook", entry,null);
+            </h3>
+
         </header>
         <p>Posted by @entry.Name on @entry.DateAdded.ToLongDateString()</p>
     </section>

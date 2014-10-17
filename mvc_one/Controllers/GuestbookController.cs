@@ -17,16 +17,20 @@ namespace mvc_one.Controllers
             return View();
         }
 
-        private List<GuestbookEntry> GetRecentEntries()
-        {
-            return (from entry in _db.Entries
-                orderby entry.DateAdded descending
-                select entry).Take(20).ToList();
-        }
-
         public ActionResult Create()
         {
             return View();
+        }
+
+        public ViewResult Show(GuestbookEntry guestbookEntry)
+        {
+            var entry = _db.Entries.Find(guestbookEntry);
+
+            bool hasPermissions = User.Identity.Name == entry.Name;
+
+            ViewData["HasPermissions"] = hasPermissions;
+
+            return View(entry);
         }
 
         [HttpPost]
@@ -36,6 +40,14 @@ namespace mvc_one.Controllers
             _db.SaveChanges();
             ViewBag.Entries = GetRecentEntries();
             return View("Index");
+        }
+
+
+        private List<GuestbookEntry> GetRecentEntries()
+        {
+            return (from entry in _db.Entries
+                    orderby entry.DateAdded descending
+                    select entry).Take(20).ToList();
         }
 
     }
